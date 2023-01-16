@@ -14,9 +14,9 @@ const ProductList = (props) => {
 
   const [location, setLocation] = useState({ long: "", lat: "", loading: false })
 
+
   useEffect(() => {
     (async () => {
-
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
         Alert.alert('Permission to access location was denied');
